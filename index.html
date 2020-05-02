@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ASTE Design</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Styling For Line Chart -->
+    <link href="css/line-chart.css" rel="stylesheet">
+    <style>
+        #container1 .highcharts-background {
+            width: 280px !important;
+            padding: 0px;
+        }
+        
+        #container1 .highcharts-root {
+            width: 280px !important;
+            padding: 0px;
+            margin-left: -20px;
+        }
+        
+        #container1 .highcharts-container {
+            width: 280px !important;
+            padding: 0px;
+        }
+        
+        #container1 .highcharts-background {
+            width: 280px !important;
+            padding: 0px;
+        }
+        
+        #container1 .highcharts-root {
+            width: 280px !important;
+            padding: 0px;
+            margin-left: -20px;
+        }
+        
+        #container1 .highcharts-container {
+            width: 280px !important;
+            padding: 0px;
+        }
+        /* checkbox */
+        
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            border-color: #00b584;
+            background-color: #00b584;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar .nav-item .nav-link[data-toggle=collapse]::after {
+                content: none !important;
+            }
+        }
+        
+        .nav-link {
+            display: block;
+            width: 20px !important;
+            text-align: right;
+            padding: 1rem;
+            width: 14rem;
+        }
+        
+        .custom-control-input {
+            position: relative !important;
+            margin-left: 13px !important;
+            padding: 0px;
+            z-index: -1;
+            opacity: 0;
+        }
+        
+        .sidebar .nav-item .nav-link,
+        .topbar .nav-item .nav-link {
+            position: relative !important;
+            top: 7px;
+            z-index: 99;
+        }
+        
+        #plus {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        
+        .collapse-inner {
+            margin-bottom: 0px !important;
+            padding: 0px !important;
+        }
+        
+        .progress-sm {
+            width: 140px;
+        }
+        
+        .progress-lbl {
+            font-size: 12px;
+            width: 90px;
+            text-align: center;
+        }
+        
+        .aste-guage {
+            width: 200px !important;
+            height: 200px;
+            float: left !important;
+            margin-top: 10px;
+            margin-left: -20px !important;
+        }
+    </style>
+</head>
+
+<body id="page-top" ng-app="myApp" ng-controller="myCtrl">
+    <div style="width: 99%;height: 69px; background-image: url(header.png);">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 text-white row">
+                <div class="col-sm-2">
+
+                    <!-- Sidebar Toggle (Topbar Small Devices Only) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+
+                    <img src="logo.png" alt="" width="40px" class="mt-4 ml-md-5">
+                    <span class="mt-4 lead" style="font-size: large;float: right;">STIE</span>
+                </div>
+                <div class="mt-4 lead col-sm-10 d-none d-md-block">| Singapore Technology Of Integrated Engineering.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Wrapper -->
+    <div id="wrapper" class="mt-2">
+
+        <!-- Sidebar -->
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar accordion shadow" id="accordionSidebar">
+
+            <!-- Heading -->
+            <div class="shadow py-3 pl-2" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
+                LIST OF SITES
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item" ng-repeat="site in sites">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
+
+                    <span id="plus" style="float: left;">+</a></span>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input check" id="customCheck9" value="{{site.id}}" checked aria-label="...">
+                        <label class="custom-control-label" for="customCheck9">{{site.name}}</label>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white collapse-inner rounded">
+                            <a class="collapse-item" href="#">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input  check" id="customCheck" checked>
+                                    <label class="custom-control-label" for="customCheck">Link</label>
+                                </div>
+                            </a>
+                            <a class="collapse-item" href="#">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input check" id="customCheck2" checked>
+                                    <label class="custom-control-label" for="customCheck2">Link</label>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </li>
+
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Content Row -->
+                    <!-- Content Row -->
+                    <div class="row mb-3">
+
+                        <div class="col-sm-12 row border-left-warning shadow py-2 mx-3" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="frow col-sm-6 m-3 lead">Tarif Plan Input</div>
+                                        <hr>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">Example Plan:</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="staticEmail" value="Example Plan">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">Currency:</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="staticEmail" value="IRD">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-sm-3">
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="fromDate" value="" data-input>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="fromDate" value="" data-input>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="toDate" value="" data-input>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="toDate" value="" data-input>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="staticEmail" value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="staticEmail" value="">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                            <div class="col-sm-7">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                            <div class="col-sm-7">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- ./row -->
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-sm-12 col-lg-12 mx-2">
+                            <div class="card shadow">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Charts</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <!-- <div style="width: 610px;height: 370px;" class="shadow mx-auto"> -->
+                                            <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
+                                            <div>
+                                                <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
+                            <option>By Category</option>
+                            <option>By Device Type</option>
+                          </select>
+                                            </div>
+                                            <div id="container1" class="aste-guage" style="width: 230px !important; height: 230px;float:left !important;margin-top: 10px;margin-left: -20px !important;margin-right: 20px;"></div>
+                                            <div class="" style="float: right; margin-top: 80px;">
+
+                                                <!-- Bar 1 position:fixed;top: 0;right:0;-->
+                                                <div ng-repeat="data in groups">
+                                                    <span style="float:left;" class="mr-1 progress-lbl">{{data.deviceCategory}}</span>
+                                                    <!-- Label Left -->
+                                                    <span style="float: right;" class="mr-1 progress-lbl">{{data.power/1000 | number:0}} kW</span>
+                                                    <!-- Label Right -->
+                                                    <div class="progress progress-sm mr-2 mt-2 mb-3">
+                                                        <div class="progress-bar" role="progressbar" ng-style="{'width': (data.power/power*100)+'%'}" style="background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- </div> -->
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
+                                            <div>
+                                                <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
+                            <option>By Category</option>
+                            <option>By Device Type</option>
+                          </select>
+                                            </div>
+                                            <div id="container2" class="aste-guage" style="width: 230px !important; height: 230px;float:left !important;margin-top: 10px;margin-left: -20px !important;"></div>
+                                            <div class="" style="float: right; margin-top: 80px;">
+
+                                                <!-- Bar 1 position:fixed;top: 0;right:0;-->
+                                                <span style="float:left;" class="mr-2">Label</span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-2">Label</span>
+                                                <!-- Label Right -->
+                                                <div class="progress progress-sm mr-2 mt-2 mb-3">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <!-- Bar 2 -->
+                                                <span style="float:left;" class="mr-2">Label</span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-2">Label</span>
+                                                <!-- Label Right -->
+                                                <div class="progress progress-sm mr-2 mt-4 mb-3">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <!-- Bar 3 -->
+                                                <span style="float:left;" class="mr-2">Label</span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-2">Label</span>
+                                                <!-- Label Right -->
+                                                <div class="progress progress-sm mr-2 mt-4 mb-3">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="linear-chart"></div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js" integrity="sha256-/irFIZmSo2CKXJ4rxHWfrI+yGJuI16Z005X/bENdpTY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.min.js" integrity="sha256-UYxsBli+wc8cHs1SVw0hYf3llQlUwLuKnRii303Ivk0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone.min.js" integrity="sha256-tXd0xlqOvI9s0WXC5BvP+4rPfknLxQZUZwpwHRJ5b1k=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
+    <script src="js/solid-guage.js"></script>
+    <script src="js/linear-chart.js"></script>
+    <script>
+        $('document').ready(function() {
+            /* pick from date */
+
+            var option = {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true,
+                minuteIncrement: 1
+            }
+            $('[id=fromDate]').flatpickr(option);
+            /* pick to date */
+            $('[id=toDate]').flatpickr(option);
+
+            $('[class=check]').click(function() {
+                var temp = $(this).text();
+                console.log(temp);
+                $('[id=plus]').html('+');
+                if (temp == '+') {
+                    $(this).html('-');
+                } else {
+                    $(this).html('+');
+                }
+
+            });
+        });
+        var label = [];
+        var data = [];
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            var guage = "http://localhost:8081/realpowerconsumption";
+            var linearchart = "http://localhost:8081/realtimecost";
+            var sites = "http://localhost:8081/sites";
+            $scope.linearchart = true
+            $scope.linearchart = !$scope.powerguage
+
+            $http.get(sites)
+                .then(function(response) {
+                    $scope.sites = response.data;
+                });
+
+
+            $http.get(guage)
+                .then(function(response) {
+
+                    $scope.groups = response.data["devicegroup"];
+                    $scope.power = response.data["powerconsumption"];
+                    var val = ($scope.power / 1000).toFixed(0);
+                    var chart = $('#container1').highcharts();
+                    if (val > 380) {
+                        chart.yAxis[0].update({
+                            tickPositions: [0, (500)],
+                            max: 500
+                        });
+                    }
+
+                    chart.series[0].points[0].update(Number(val));
+
+                    $scope.powerguage = false;
+                });
+            var lineardata = []
+            $http.get(linearchart)
+                .then(function(response) {
+                    response.data.forEach(data => {
+                        if (Number(moment(data.dateTime).format('mm')) % 15 == 0) {
+                            var cost = (data.power * 1035.78 / 1000).toFixed(2);
+                            obj = [moment(data.dateTime).valueOf(), Number(cost)]
+                            lineardata.push(obj);
+                        }
+                    });
+
+                    var chart = $('#linear-chart').highcharts().series[0].update({
+                        data: lineardata
+                    }, true);
+                    $scope.linearchart = true;
+                });
+        });
+    </script>
+</body>
+
+</html>
