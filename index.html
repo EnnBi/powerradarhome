@@ -188,7 +188,33 @@
                     </div>
             </li>
 
+            <li class="nav-item" ng-repeat="site in sites">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" aria-expanded="true" aria-controls="collapseTwo">
 
+                <span style="float: left;" class="menuDrop">+</span></a>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input check" id="customCheck9" value="{{site.id}}" checked aria-label="...">
+                    <label class="custom-control-label" for="customCheck9">{{site.name}}</label>
+                </div>
+
+                <div id="" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white collapse-inner rounded">
+                        <a class="collapse-item" href="#">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input  check" id="customCheck" checked>
+                                <label class="custom-control-label" for="customCheck">Link</label>
+                            </div>
+                        </a>
+                        <a class="collapse-item" href="#">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input check" id="customCheck" checked>
+                                <label class="custom-control-label" for="customCheck">Link</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </li>
 
 
         </ul>
@@ -480,13 +506,13 @@
             
             /* pick from date */
 
-            var option = {
+           /*  var option = {
                 enableTime: true,
                 noCalendar: true,
                 dateFormat: "H:i",
                 time_24hr: true,
                 minuteIncrement: 1
-            }
+            } */
             $('[id=fromDate]').flatpickr(option);
             /* pick to date */
             $('[id=toDate]').flatpickr(option);
@@ -496,7 +522,7 @@
 
         var label = [];
         var data = [];
-        var app = angular.module('myApp', []);
+        //var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope, $http) {
             var guage = "https://ifarms.com.sg:8085/powerradar/realpowerconsumption";
             var linearchart = "https://ifarms.com.sg:8085/powerradar/realtimecost"; 
