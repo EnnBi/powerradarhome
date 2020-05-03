@@ -78,10 +78,11 @@
               position:relative !important;
               top:7px;
               z-index: 99;
+              padding-top: 5px;
           }
-          #plus{
-            font-size:25px;
-            font-weight: bolder;
+          .menuDrop {
+            font-size:22px !important;
+            font-weight: bolder !important;
           }
           .collapse-inner{
             margin-bottom: 0px !important;
@@ -105,7 +106,26 @@
           white-space: nowrap; 
           font-size: xx-small !important;
       }
+      .nav-link {
+            display: block;
+            width: 290px !important; 
+            text-align: right;
+            
+            white-space: nowrap;
+            padding: 10px;
+        }
+        label {
+                display: inline; 
+                text-overflow: wrap;padding: 0px;
+        }
+      .custom-control-label::before {
+            top: 0rem;
+        }
+     .custom-control-label::after {
+          top: 0px;
+       }
       </style>
+      
 </head>
 
 <body id="page-top" ng-app="myApp" ng-controller="myCtrl">
@@ -135,22 +155,22 @@
         <ul class="navbar-nav sidebar accordion shadow" id="accordionSidebar">
 
             <!-- Heading -->
-            <div class="shadow py-3 pl-2" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
+            <div class="shadow py-3 pl-2 hy" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
                 LIST OF SITES
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item" ng-repeat="site in sites">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" aria-expanded="true" aria-controls="collapseTwo">
 
-                    <span id="plus" style="float: left;">+</span></a>
+                    <span style="float: left;" class="menuDrop">+</span></a>
 
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input check" id="customCheck9" value="{{site.id}}" checked aria-label="...">
                         <label class="custom-control-label" for="customCheck9">{{site.name}}</label>
                     </div>
 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div id="" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white collapse-inner rounded">
                             <a class="collapse-item" href="#">
                                 <div class="custom-control custom-checkbox">
@@ -427,6 +447,33 @@
     <script src="js/linear-chart.js"></script>
     <script>
         $('document').ready(function() {
+            
+                    $('[class=menuDrop]').click(function(){
+                        var temp=$(this).text();
+                        console.log(temp);
+                        var myparent=$(this).parent(); 
+                        var myDrop= myparent.next();
+                        myDrop=myDrop.next();
+                        myDrop.toggleClass('show');
+                        $('[class=menuDrop]').html('+');
+                        if(temp=='+')
+                        {
+                        $(this).html('-');
+                        }
+                        else{
+                        $(this).html('+');
+                        }
+                        
+                    });
+                    $('input[type="checkbox"]').click(function(){
+                        if($(this).prop("checked") == true){
+                            console.log("Checkbox is checked.");
+                        }
+                        else if($(this).prop("checked") == false){
+                            console.log("Checkbox is unchecked.");
+                        }
+                    });
+            
             /* pick from date */
 
             var option = {
@@ -440,27 +487,19 @@
             /* pick to date */
             $('[id=toDate]').flatpickr(option);
 
-            $('[class=check]').click(function() {
-                var temp = $(this).text();
-                console.log(temp);
-                $('[id=plus]').html('+');
-                if (temp == '+') {
-                    $(this).html('-');
-                } else {
-                    $(this).html('+');
-                }
-
-            });
+            
         });
+    </script>
+    <script>
         var label = [];
         var data = [];
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope, $http) {
             var guage = "https://ifarms.com.sg:8085/powerradar/realpowerconsumption";
-            var linearchart = "https://ifarms.com.sg:8085/powerradar/realtimecost";
+            var linearchart = "https://ifarms.com.sg:8085/powerradar/realtimecost"; 
             var sites = "https://ifarms.com.sg:8085/powerradar/sites";
-            $scope.linearchart = true
-            $scope.linearchart = !$scope.powerguage
+             $scope.linearchart = true
+            $scope.linearchart = !$scope.powerguage 
 
             $http.get(sites)
                 .then(function(response) {
@@ -502,7 +541,7 @@
                     }, true);
                     $scope.linearchart = true;
                 });
-        });
+        }); 
     </script>
 </body>
 
