@@ -118,10 +118,10 @@
                     fontSize: "20px"
                 },
                 color: "grey",
-                crop: true,
+                crop: false,
                  formatter: function () {
                     var s;
-                    s = '<span>' +'254KW' + '<br>'  + '</span>'+ '<div> Rp/Hr</div>';
+                    s = '<span>' + this.point.y + 'KW<br>'  + '</span>'+ '<div style="font-size:10px;">' +(this.point.y * 1035.78).toFixed(0) + 'Rp/Hr</div>';
                     return s;
                 },
                 y: -30,
@@ -279,7 +279,7 @@ $(function () {
                 crop: false,
                  formatter: function () {
                     var s;
-                    s = '<span>' +'254KW' + '<br>'  + '</span>'+ '<div> Rp/Hr</div>';
+                    s = '<span>' + this.point.y + 'KW<br>' + '</span>'+ '<div style="font-size:10px;">' +(this.point.y * 1035.78).toFixed(0) + 'Rp/Hr</div>';
                     return s;
                 },
                 y: -30,
