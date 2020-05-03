@@ -20,92 +20,109 @@
     <!-- Styling For Line Chart -->
     <link href="css/line-chart.css" rel="stylesheet">
     <style>
-        .progress-sm{
-          width: 90px;
-          height: 10px;
+        .progress-sm {
+            width: 90px;
+            height: 10px;
         }
-        .progress-lbl{
-          font-size: 10px;
-          width: 125px;
-          text-align: center;
+        
+        .progress-lbl {
+            font-size: 10px;
+            width: 125px;
+            text-align: center;
         }
-        .progress-lbr{
-          font-size: 10px;
-          width: 45px;
-          text-align: center;
+        
+        .progress-lbr {
+            font-size: 10px;
+            width: 45px;
+            text-align: center;
         }
-         .aste-guage{  
-            width: 200px !important; height: 
-            200px;float:left !important;
+        
+        .aste-guage {
+            width: 200px !important;
+            height: 200px;
+            float: left !important;
             margin-top: 10px;
             margin-left: -20px !important;
-           }
-           #container1 .highcharts-root{
-            width:280px !important;
+        }
+        
+        #container1 .highcharts-root {
+            width: 280px !important;
             padding: 0px;
             margin-left: -20px;
-           }
-           #container1 .highcharts-container {
-             width:280px !important;
-             padding: 0px;
-           }
-      
-           /* checkbox */
-           .custom-control-input:checked~.custom-control-label::before {
-              color: #fff;
-              border-color: #00b584;
-              background-color: #00b584;
-          }
-          @media (min-width: 768px) {
-          .sidebar .nav-item .nav-link[data-toggle=collapse]::after {
-               content: none !important;
-          }}
-          .nav-link {
-             display: block;
-              width: 20px !important;
-              text-align:right;
-              padding: 1rem;
-              width: 14rem;
-          }
-          .custom-control-input {
-              position: relative !important; 
-              margin-left: 13px !important;
-              padding: 0px;
-              z-index: -1;
-              opacity: 0;
-          }
-          .sidebar .nav-item .nav-link, .topbar .nav-item .nav-link {
-              position:relative !important;
-              top:7px;
-              z-index: 99;
-          }
-          #plus{
-            font-size:25px;
+        }
+        
+        #container1 .highcharts-container {
+            width: 280px !important;
+            padding: 0px;
+        }
+        /* checkbox */
+        
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            border-color: #00b584;
+            background-color: #00b584;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar .nav-item .nav-link[data-toggle=collapse]::after {
+                content: none !important;
+            }
+        }
+        
+        .nav-link {
+            display: block;
+            width: 20px !important;
+            text-align: right;
+            padding: 1rem;
+            width: 14rem;
+        }
+        
+        .custom-control-input {
+            position: relative !important;
+            margin-left: 13px !important;
+            padding: 0px;
+            z-index: -1;
+            opacity: 0;
+        }
+        
+        .sidebar .nav-item .nav-link,
+        .topbar .nav-item .nav-link {
+            position: relative !important;
+            top: 7px;
+            z-index: 99;
+        }
+        
+        #plus {
+            font-size: 25px;
             font-weight: bolder;
-          }
-          .collapse-inner{
+        }
+        
+        .collapse-inner {
             margin-bottom: 0px !important;
             padding: 0px !important;
-          }
-          
+        }
+        
         .sidebar {
-          width: 18rem!important;
-          width: 300px;
-         }
-         .custom-control-label {
-          font-size: small;
-         }
-         .sidebar .nav-item .collapse .collapse-inner .collapse-item, .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
-          padding: 0px;
-          margin: 0 .3rem;
-          display: block;
-          color: #3a3b45;
-          text-decoration: none;
-          border-radius: .35rem;
-          white-space: nowrap; 
-          font-size: xx-small !important;
-      }
-      </style>
+            width: 18rem!important;
+            width: 300px;
+        }
+        
+        .custom-control-label {
+            font-size: small;
+        }
+        
+        .sidebar .nav-item .collapse .collapse-inner .collapse-item,
+        .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+            padding: 0px;
+            margin: 0 .3rem;
+            display: block;
+            color: #3a3b45;
+            text-decoration: none;
+            border-radius: .35rem;
+            white-space: nowrap;
+            font-size: xx-small !important;
+        }
+    </style>
 </head>
 
 <body id="page-top" ng-app="myApp" ng-controller="myCtrl">
@@ -145,27 +162,27 @@
 
                     <span id="plus" style="float: left;">+</span></a>
 
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input check" id="customCheck9" value="{{site.id}}" checked aria-label="...">
-                        <label class="custom-control-label" for="customCheck9">{{site.name}}</label>
-                    </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input check" id="customCheck9" value="{{site.id}}" checked aria-label="...">
+                    <label class="custom-control-label" for="customCheck9">{{site.name}}</label>
+                </div>
 
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white collapse-inner rounded">
-                            <a class="collapse-item" href="#">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input  check" id="customCheck" checked>
-                                    <label class="custom-control-label" for="customCheck">Link</label>
-                                </div>
-                            </a>
-                            <a class="collapse-item" href="#">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input check" id="customCheck2" checked>
-                                    <label class="custom-control-label" for="customCheck2">Link</label>
-                                </div>
-                            </a>
-                        </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white collapse-inner rounded">
+                        <a class="collapse-item" href="#">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input  check" id="customCheck" checked>
+                                <label class="custom-control-label" for="customCheck">Link</label>
+                            </div>
+                        </a>
+                        <a class="collapse-item" href="#">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input check" id="customCheck2" checked>
+                                <label class="custom-control-label" for="customCheck2">Link</label>
+                            </div>
+                        </a>
                     </div>
+                </div>
             </li>
 
 
@@ -218,14 +235,14 @@
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="fromDate" value="" data-input>
+                                                <input type="text" class="form-control time" id="" value="" data-input>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="fromDate" value="" data-input>
+                                                <input type="text" class="form-control time" id="" value="" data-input>
                                             </div>
                                         </div>
 
@@ -235,14 +252,14 @@
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="toDate" value="" data-input>
+                                                <input type="text" class="form-control time" id="" value="" data-input>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="toDate" value="" data-input>
+                                                <input type="text" class="form-control time" id="" value="" data-input>
                                             </div>
                                         </div>
 
@@ -318,7 +335,7 @@
                                                   <option>By Category</option>
                                                   <option>By Device Type</option>
                                                 </select>
-                                              </div>
+                                            </div>
                                             <div id="container1" class="aste-guage"></div>
                                             <div class="mr-1" style="float: left; margin-top: 60px;">
 
@@ -436,9 +453,8 @@
                 time_24hr: true,
                 minuteIncrement: 1
             }
-            $('[id=fromDate]').flatpickr(option);
-            /* pick to date */
-            $('[id=toDate]').flatpickr(option);
+            $('.time').flatpickr(option);
+
 
             $('[class=check]').click(function() {
                 var temp = $(this).text();
@@ -456,9 +472,9 @@
         var data = [];
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function($scope, $http) {
-            var guage = "https://ifarms.com.sg:8085/powerradar/realpowerconsumption";
-            var linearchart = "https://ifarms.com.sg:8085/powerradar/realtimecost";
-            var sites = "https://ifarms.com.sg:8085/powerradar/sites";
+            var guage = "http://localhost:8081/realpowerconsumption";
+            var linearchart = "http://localhost:8081/realtimecost";
+            var sites = "http://localhost:8081/sites";
             $scope.linearchart = true
             $scope.linearchart = !$scope.powerguage
 
