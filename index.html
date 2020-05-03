@@ -180,8 +180,8 @@
                             </a>
                             <a class="collapse-item" href="#">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input check" id="customCheck2" checked>
-                                    <label class="custom-control-label" for="customCheck2">Link</label>
+                                    <input type="checkbox" class="custom-control-input check" id="customCheck" checked>
+                                    <label class="custom-control-label" for="customCheck">Link</label>
                                 </div>
                             </a>
                         </div>
@@ -465,12 +465,16 @@
                         }
                         
                     });
-                    $('input[type="checkbox"]').click(function(){
+                   
+
+                    $('[id=customCheck]').on('click', function(){
                         if($(this).prop("checked") == true){
                             console.log("Checkbox is checked.");
+                            //$(this).prop('checked', true);
                         }
                         else if($(this).prop("checked") == false){
                             console.log("Checkbox is unchecked.");
+                            //$(this).prop('checked', false);
                         }
                     });
             
@@ -489,8 +493,7 @@
 
             
         });
-    </script>
-    <script>
+
         var label = [];
         var data = [];
         var app = angular.module('myApp', []);
