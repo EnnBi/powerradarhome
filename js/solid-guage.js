@@ -83,7 +83,7 @@ $(function() {
                 y: 0,
                 format: '{value} kW',
                 style: {
-                    fontSize: 12
+                    fontSize: 8
                 }
             }
         },
@@ -241,7 +241,7 @@ $(function() {
                 y: 0,
                 format: '{value}',
                 style: {
-                    fontSize: 12
+                    fontSize: 8
                 }
             }
         },
