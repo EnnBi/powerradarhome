@@ -10,17 +10,16 @@
     <meta name="author" content="">
 
     <title>ASTE Design</title>
-   <!--  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
     <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
     
     <!-- For demo to be romoved -->
     <link href="css2/wickedpicker.min.css" rel="stylesheet" type="text/css" />
-   
       <!-- Custom styles for this template-->
       <link href="css/sb-admin-2.min.css" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-
-      <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"> -->
+      
   
     <!-- Styling For Line Chart -->
     <link href="css/line-chart.css" rel="stylesheet">
@@ -64,21 +63,40 @@
              padding: 0px;
            }
            ul.bt-list-bootstrap li [data-role="display"] {
-                padding: 4px 0 4px 2px;
+                padding: 4px 0 4px 6px;
                 white-space: nowrap;
                 display: block;
                 color: #3a3b45;
                 text-decoration: none;
-                padding-right: 5px;
+                padding-right: 10px;
+                margin-right: 10px;
+               
+            }
+            .sideshade{
+                box-shadow: 0 .15rem 1.75rem 0 rgba(45, 45, 53, 0.212) !important;
+            }
+            
+            dl, ol, ul {
+               /*  margin-top: 0px !important; */
+                margin-bottom: 0;
+            }
+            ul {
+                margin-top: 20px;
+                margin-bottom: 0px;
+            }
+            ul ul{
+                margin-top: 0px;
+                margin-bottom: 0px;
             }
             ul.bt-list-bootstrap {
                 padding-left: 0;
                 margin-bottom: 0;
                 width: max-content;
                 display: block;
+                background-color: #858796 !important;
             }
             .bt-checkbox-bootstrap span {
-                background: #fff;
+                /* background: #fff; */
                 display: block;
                 content: " ";
                 width: 14px;
@@ -162,10 +180,10 @@
 
         <!-- Sidebar -->
         
-        <div id="tree">
-           <!--  <div class="shadow py-3 pl-2 hy" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
-            LIST OF SITES
-            </div> -->
+        <div id="tree" class="sideshade mt-2">
+            <div class="shadow">
+                LIST OF SITES
+            </div>
         </div>
        
           
@@ -186,110 +204,112 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Content Row -->
+                    <!-- Content Row row border-left-warning-->
                     <div class="row mb-3">
  
-                        <div class="col-sm-12 row border-left-warning shadow py-2 mx-3" style="background-color: #fff;border: 1px solid #e3e6f0;border-radius: .35rem;background-clip: border-box;">
-                           <form>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="frow col-sm-6 m-3 font-weight-bold">Tarif Plan Input</div>
-                                        
+                        <div class="col-sm-12 mt-2" >
+                          <div class="card shadow p-3">
+                            <form>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div style="width: 100%; margin-bottom: 10px;font-size: 20px;font-family: fantasy;">Tarif Plan Input</div>
+                                            
 
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">Example Plan:</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="staticEmail" value="Example Plan">
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">Example Plan:</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" id="staticEmail" value="Example Plan">
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">Currency:</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="staticEmail" value="IRD">
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">Currency:</label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" id="staticEmail" value="IRD">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row ">
-                                    <div class="col-sm-3">
+                                    <div class="row ">
+                                        <div class="col-sm-3">
 
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control timepicker" name="" id="" value="" >
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control timepicker" name="" id="" value="" >
+                                                </div>
                                             </div>
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control timepicker" id="" value="" t>
+                                                </div>
+                                            </div>
+
                                         </div>
+                                        <div class="col-sm-3">
 
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control timepicker" id="" value="" t>
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control toDate" id="" name="toDate" >
+                                                </div>
                                             </div>
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control toDate" id="" name="toDate">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-3">
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="staticEmail" value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="staticEmail" value="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-3">
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                     </div>
-                                    <div class="col-sm-3">
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control toDate" id="" name="toDate" >
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control toDate" id="" name="toDate">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-3">
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="staticEmail" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control" id="staticEmail" value="">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-3">
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
-                                            <div class="col-sm-7">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
-                                            <div class="col-sm-7">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
                             </form>
+                          </div>
                         </div>
 
                     </div>
@@ -300,7 +320,7 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-sm-12 col-lg-12 mx-2">
+                        <div class="col-sm-12 col-lg-12">
                             <div class="card shadow">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -439,13 +459,14 @@
                     uiLibrary: 'bootstrap',
                     //dataSource: '/Locations/Get',
                     dataSource: [
-        				{ id: 1, text: 'Apple Graple Fruits banana', children: [ 
+        				{ id: 1, text: 'Apple Graple Fruits banana hgj', children: [ 
                             { id: 2, text: 'Avocado jdshgjh', children: [
                                 { id: 5, text: 'Broccoli',children: [
                                     { id: 6, text: 'Bunch Grape' }]
                                 }] 
                             }] 
-                        }],
+                        } ,{ id: 6, text: 'This is a link' }
+                    ],
                     checkboxes: true
                 });
                 $('#btnSave').on('click', function () {
@@ -465,7 +486,7 @@
              /*pick to date */
           // $('.toDate').flatpickr(option);
            
-        $('input.timepicker').timepicker({
+        $('.fromDate').timepicker({
             timeFormat: 'h:mm p',
             interval: 60,
             minTime: '10',
@@ -483,7 +504,7 @@
             downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
             close: 'wickedpicker__close', //The close class selector to use, for custom CSS
             hoverState: 'hover-state', //The hover state class to use, for custom CSS
-            title: 'From Date', //The Wickedpicker's title,
+            title: 'To Date', //The Wickedpicker's title,
             showSeconds: false, //Whether or not to show seconds,
             secondsInterval: 1, //Change interval for seconds, defaults to 1
             minutesInterval: 1, //Change interval for minutes, defaults to 1
