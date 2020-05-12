@@ -2,67 +2,62 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>ASTE Design</title>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-        <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
-    <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
-    
-    <!-- For demo to be romoved -->
-    <link href="css2/wickedpicker.min.css" rel="stylesheet" type="text/css" />
-      <!-- Custom styles for this template-->
-      <link href="css/sb-admin-2.min.css" rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-      
-  
+
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom styles for this template-->
+         <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
     <!-- Styling For Line Chart -->
-    <link href="css/line-chart.css" rel="stylesheet">
+        <link href="css/line-chart.css" rel="stylesheet">
+
+    <!-- For demo to be romoved -->
+     <link href="css2/wickedpicker.min.css" rel="stylesheet" type="text/css" />
+
     <style>
-    body {
-       /*  font-family: Roboto,Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #858796;
-       /*  text-align: left; */
-    }
-      
+        body {
+        /*  font-family: Roboto,Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #858796;
+        /*  text-align: left; */
+        }
+        
         .progress-sm{
-          width: 90px;
-          height: 10px;
-        }
+            width: 90px;
+            height: 10px;
+         }
         .progress-lbl{
-          font-size: 10px;
-          width: 125px;
-          text-align: center;
+            font-size: 10px;
+            width: 125px;
+            text-align: center;
+         }
+         .progress-lbr{
+            font-size: 10px;
+            width: 45px;
+            text-align: center;
         }
-        .progress-lbr{
-          font-size: 10px;
-          width: 45px;
-          text-align: center;
-        }
-         .aste-guage{  
+        .aste-guage{  
             width: 200px !important; height: 
             200px;float:left !important;
             margin-top: 10px;
             margin-left: -20px !important;
-           }
-           #container1 .highcharts-root{
+        }
+        #container1 .highcharts-root{
             width:280px !important;
             padding: 0px;
             margin-left: -20px;
-           }
-           #container1 .highcharts-container {
+        }
+        #container1 .highcharts-container {
              width:280px !important;
              padding: 0px;
-           }
-           ul.bt-list-bootstrap li [data-role="display"] {
+        }
+        ul.bt-list-bootstrap li [data-role="display"] {
                 padding: 4px 0 4px 6px;
                 white-space: nowrap;
                 display: block;
@@ -71,31 +66,36 @@
                 padding-right: 10px;
                 margin-right: 10px;
                
-            }
-            .sideshade{
+        }
+        .sideshade{
                 box-shadow: 0 .15rem 1.75rem 0 rgba(45, 45, 53, 0.212) !important;
-            }
-            
-            dl, ol, ul {
+        }
+        
+        dl, ol, ul {
                /*  margin-top: 0px !important; */
-                margin-bottom: 0;
-            }
-            ul {
+            margin-bottom: 0;
+        }
+        ul {
                 margin-top: 20px;
                 margin-bottom: 0px;
-            }
-            ul ul{
+        }
+        ul ul{
                 margin-top: 0px;
                 margin-bottom: 0px;
-            }
-            ul.bt-list-bootstrap {
-                padding-left: 0;
+        }
+        ul.bt-list-bootstrap {
+                padding-left: 5px;
                 margin-bottom: 0;
                 width: max-content;
                 display: block;
-                background-color: #858796 !important;
-            }
-            .bt-checkbox-bootstrap span {
+                /* background-color: #858796 !important; */
+        }
+        
+        ul.bt-list li [data-role="expander"] {
+                text-align: left;
+                cursor: pointer;
+        }
+        .bt-checkbox-bootstrap span {
                 /* background: #fff; */
                 display: block;
                 content: " ";
@@ -103,20 +103,21 @@
                 height: 14px;
                 line-height: 9px;
                 font-size: 9px;
-                padding: 0px;
+               /*  padding: 0px; */
                 color: #00b584;
                 border: 1px solid #00b584;
                 border-radius: 3px;
                 transition: box-shadow 0.2s linear,border-color 0.2s linear;
                 cursor: pointer;
                 margin: 1px;
-            }
-           /*  .bt-checkbox-bootstrap::before {
-                color: #fff;
-                border-color: #00b584;
-                background-color: #00b584;
-            } */
-            .bt-checkbox-glyphicons input[type="checkbox"]:indeterminate + span::after {
+        }
+        [data-type="tree"] ul li [data-role="expander"].bt-tree-glyphicons-expander .glyphicon {
+            top: 4px;
+            height: 24px;
+            font-weight: lighter;
+            color: maroon;
+        }
+        .bt-checkbox-glyphicons input[type="checkbox"]:indeterminate + span::after {
                 display: inline-block;
                 font-family: 'Glyphicons Halflings';
                 content: "\2212 ";
@@ -124,16 +125,16 @@
                 background: #00b584;
                 color: #fff;
                 border: 1px solid #00b584;
-            }
-            .bt-checkbox-glyphicons input[type="checkbox"]:checked + span::after {
+        }
+        .bt-checkbox-glyphicons input[type="checkbox"]:checked + span::after {
                 display: inline-block;
                 font-family: 'Glyphicons Halflings';
                 content: "\e013 ";
                 background: #00b584;
                 color: #fff;
                 border: 1px solid #00b584;
-            }
-            .glyphicon {
+        }
+        .glyphicon {
                 position: relative;
                 top: 1px;
                 display: inline-block;
@@ -143,16 +144,15 @@
                 line-height: 1;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-            }
-            ul.bt-list-bootstrap li [data-role="wrapper"] {
+        }
+        ul.bt-list-bootstrap li [data-role="wrapper"] {
                 padding: 0 0px;
-            }
-            [data-type="tree"] ul li [data-role="expander"].bt-tree-glyphicons-expander {
+        }
+        [data-type="tree"] ul li [data-role="expander"].bt-tree-glyphicons-expander {
                 width: 18px;
-            }
+        }
            
- 
-      </style>
+    </style>
 
 </head>
 
@@ -181,9 +181,9 @@
         <!-- Sidebar -->
         
         <div id="tree" class="sideshade mt-2">
-            <div class="shadow">
+            <!-- <div class="shadow">
                 LIST OF SITES
-            </div>
+            </div> -->
         </div>
        
           
@@ -236,14 +236,14 @@
                                             <div class="form-group row">
                                                 <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control timepicker" name="" id="" value="" >
+                                                    <input type="text" class="form-control fromDate" name="fromDate" id="" value="" >
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control timepicker" id="" value="" t>
+                                                    <input type="text" class="form-control fromDate" id="" name="fromDate" t>
                                                 </div>
                                             </div>
 
@@ -421,12 +421,9 @@
 
    
     <!-- Bootstrap core JavaScript-->
-    <!-- <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script src="vendor/jquery/jquery.min.js"></script>
     <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <!--  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> -->
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>    
@@ -439,7 +436,6 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js" integrity="sha256-/irFIZmSo2CKXJ4rxHWfrI+yGJuI16Z005X/bENdpTY=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.min.js" integrity="sha256-UYxsBli+wc8cHs1SVw0hYf3llQlUwLuKnRii303Ivk0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone.min.js" integrity="sha256-tXd0xlqOvI9s0WXC5BvP+4rPfknLxQZUZwpwHRJ5b1k=" crossorigin="anonymous"></script>
@@ -451,54 +447,48 @@
    <!-- Only for demo to be removed -->
     <script type="text/javascript" src="wickedpicker.js"></script>
 
-     <script src="js/bootree.min.js" type="text/javascript"></script> 
+     <script src="js/bootree.js" type="text/javascript"></script> 
      <script type="text/javascript">
             $(document).ready(function () {
-                var tree = $('#tree').tree({
-                    primaryKey: 'id',
+                 tree = $('#tree').tree({
+                    width:300,
+                    //border:true,
                     uiLibrary: 'bootstrap',
-                    //dataSource: '/Locations/Get',
-                    dataSource: [
-        				{ id: 1, text: 'Apple Graple Fruits banana hgj', children: [ 
-                            { id: 2, text: 'Avocado jdshgjh', children: [
-                                { id: 5, text: 'Broccoli',children: [
-                                    { id: 6, text: 'Bunch Grape' }]
-                                }] 
-                            }] 
-                        } ,{ id: 6, text: 'This is a link' }
-                    ],
-                    checkboxes: true
-                });
-                $('#btnSave').on('click', function () {
-                    var checkedIds = tree.getCheckedNodes();
-                    alert(checkedIds);
-                });
+                    cascadeCheck: false,
+                    checkboxes: true,
+                    hasChildrenField: 'anyChildren',
+                    dataSource: level1
+            });
+            tree.on('expand', function (e, $node, id) {
+                  var i, children, record = tree.getDataById(id);
+                  if (tree.getChildren($node).length === 0) {
+                      if (record.type === 'mainMenu') {
+                          children = $.grep(level2, function (i) { return i.mainMenu === record.text; });
+                          for (i = 0; i < children.length; i++) {
+                              tree.addNode(children[i], $node);
+                          }
+                      } else if (record.type === 'submenu1') {
+                          children = $.grep(level3, function (i) { return i.submenu1 === record.text; });
+                          for (i = 0; i < children.length; i++) {
+                              tree.addNode(children[i], $node);
+                          }
+                      }
+                      else if (record.type === 'submenu2') {
+                          children = $.grep(level4, function (i) { return i.submenu2 === record.text; });
+                          for (i = 0; i < children.length; i++) {
+                              tree.addNode(children[i], $node);
+                          }
+                      }
+                  }
+            });
+            tree.on('select', function (e, node, id) {
+                alert('select is fired for node with id=' + id);
+            }); 
+     
+        $('.fromDate').timepicker();
 
-            /* pick from date */
-             /*    var option = {
-                enableTime: true,
-                noCalendar: true,
-                dateFormat: "H:i",
-                time_24hr: true,
-                minuteIncrement: 1 
-           } */
-          // $('[id=fromDate]').flatpickr(option);
-             /*pick to date */
-          // $('.toDate').flatpickr(option);
-           
-        $('.fromDate').timepicker({
-            timeFormat: 'h:mm p',
-            interval: 60,
-            minTime: '10',
-            maxTime: '6:00pm',
-            defaultTime: '11',
-            startTime: '10:00',
-            dynamic: false,
-            dropdown: true,
-            scrollbar: true
-        });
         // The below one is for demo only to be removed
-        var optionss = { now: "12:35", //hh:mm 24 hour format only, defaults to current time
+       /*  var optionss = { now: "12:35", //hh:mm 24 hour format only, defaults to current time
             twentyFour: false, //Display 24 hour format, defaults to false
             upArrow: 'wickedpicker__controls__control-up', //The up arrow class selector to use, for custom CSS
             downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
@@ -511,12 +501,34 @@
             beforeShow: null, //A function to be called before the Wickedpicker is shown
             show: null, //A function to be called when the Wickedpicker is shown
             clearable: false, //Make the picker's input clearable (has clickable "x")
-            }; 
-        $('.toDate').wickedpicker(optionss);
+            };  */
+        $('.toDate').wickedpicker();
  });
   
+  ////////////////// List of arrays given as DataSource to tree (Every menu has an array) ////////////////
+         var level1, level2, level3,level4, tree;
+              level1 = [
+                  {  anyChildren: true, text: 'Asia', type: 'mainMenu' },
+                  {  anyChildren: true, text: 'North America', type: 'mainMenu' },
+                  {  anyChildren: false, text: 'South America', type: 'mainMenu' }
+              ];
+              level2 = [
+                  { anyChildren: false, mainMenu: 'Asia', text: 'China', type: 'submenu1' },
+                  { anyChildren: true, mainMenu: 'North America', text: 'USA', type: 'submenu1' }
+              ];
+              level3 = [
+                  { anyChildren:true, submenu1: 'USA', text: 'California', type: 'submenu2' },
+                  { anyChildren:false, submenu1: 'USA', text: 'Florida', type: 'submenu2' }
+              ];
+              level4 = [
+                  {  submenu2: 'California', text: 'Baramulla', type: 'submenu3' },
+                  {  submenu2: 'California', text: 'Srinagar', type: 'submenu3' }
+              ];
 
-        /* Code By Nadeem Sir  */
+        /**********************************************/
+        /* ----------- CODE BY NADEEM SIR ----------- */
+        /**********************************************/
+
         var label = [];
         var data = [];
         var app = angular.module('myApp', []);
