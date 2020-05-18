@@ -14,7 +14,7 @@ $(function() {
 
         chart: {
             type: 'solidgauge',
-            marginTop: 0
+            marginTop: 0          
         },
 
         title: {
@@ -30,8 +30,8 @@ $(function() {
             shadow: false,
             style: {
                 fontSize: '0px'
-            },
-            //pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold; text-align: center">{point.y}%</span>',
+            }, 
+            pointFormat: '{series.name}<br><span style="font-size:2em; color: red; font-weight: bold; text-align: center">hhh</span>',
             positioner: function(labelWidth, labelHeight) {
                 return {
                     x: 200 - labelWidth / 2,
@@ -64,31 +64,27 @@ $(function() {
                 //shape: 'arc'
             }]
         },
-
+               
         yAxis: {
-            reversed: false,
             min: 0,
             max: 420,
-            lineWidth: 0,
-            tickLength: 0,
-            tickWidth: 0,
-            tickColor: 'white',
-            tickPosition: 'outside',
+            //tickColor: 'white',
             minorTickLength: 0,
             tickPositions: [0, 420],
+            lineWidth: 0,
             labels: {
-                distance: 30,
-                enabled: true,
-                x: 0,
-                y: 0,
-                format: '{value} kW',
-                style: {
-                    fontSize: 8
+                    distance: 30,
+                    enabled: true,
+                    align: 'center',
+                    x: 0,
+                    y: 0,
+                    format: '{value} KW',
+                    style: {
+                        fontSize: 8
+                    }
                 }
-            }
-        },
-
-        plotOptions: {
+          },
+       /*  plotOptions: {
             solidgauge: {
                 borderWidth: '11px',
                 dataLabels: {
@@ -98,37 +94,52 @@ $(function() {
                 stickyTracking: false
             }
         },
-
-        series: [{
-                name: '',
-                borderColor: Highcharts.getOptions().colors[0],
-                data: [{
-                    color: Highcharts.getOptions().colors[0],
-                    radius: '100%',
-                    innerRadius: '95%',
-                    y: 0 // OR 3*(25/100) 
-                }],
-                dataLabels: {
-                    borderRadius: 0,
-                    backgroundColor: "#fff",
-                    borderWidth: 0,
-                    borderColor: "#FFF",
-                    style: {
-                        fontSize: "20px"
-                    },
-                    color: "grey",
-                    crop: true,
+ */
+    plotOptions: {
+        solidgauge: {
+            borderWidth: '11px',
+            dataLabels: {
+                enabled: true
+            },
+       // rounded: true,
+        linecap: 'round'
+        }
+    },
+   
+    series: [{
+        name: '',
+        borderColor: Highcharts.getOptions().colors[0],
+        data: [{
+            color: Highcharts.getOptions().colors[0],
+            radius: '100%',
+            innerRadius: '95%',
+            y: 0 
+        }],
+        dataLabels: {
+            borderRadius: 0,
+            backgroundColor: "#fff",
+            borderWidth: 0,
+            borderColor: "#FFF",
+            style: {
+                fontSize: "14px",
+                align:'center'
+            },
+            color: "grey",
+            crop: false,
+            useHTML:true,
                     formatter: function() {
                         var s;
-                        s = '<span>' + this.point.y + 'kW<br>' + '</span>' + '<div style="font-size:10px;">' + (this.point.y * 1035.78).toFixed(0) + ' Rp/Hr</div>';
+                        //s = '<span>' + this.point.y + 'KW<br>' + '</span>' + '<div style="font-size:10px;">' + (this.point.y * 1035.78).toFixed(0) + ' Rp/Hr</div>';
+                        s = '<div style="text-align:center"><span>' + this.point.y + 'KW' + '</span><br><br><br>' +'<span style="font-size:10px;">' + this.point.y + 'KW' + '</span><br>' + '<div style="font-size:10px;">' + (this.point.y * 1035.78).toFixed(0) + ' Rp/Hr</div></div>';
                         return s;
                     },
-                    y: -30,
+                                   
+                    y: 85,
 
 
                 }
 
-            },
+            }]
             /*  {
                         name: 'Department Average',
                         borderColor: Highcharts.getOptions().colors[1],
@@ -147,12 +158,14 @@ $(function() {
                             innerRadius: '50%',
                             y: 50
                         }]
-                    }*/
-        ]
-    });
-
+                    } 
+        ]*/
+    }); 
+    
 
 });
+
+
 
 /* Container 2 */
 
@@ -182,7 +195,7 @@ $(function() {
             }
         },
 
-        tooltip: {
+       /*  tooltip: {
             borderWidth: 0,
             backgroundColor: 'none',
             shadow: false,
@@ -196,7 +209,7 @@ $(function() {
                     y: 180
                 };
             }
-        },
+        }, */
 
         pane: {
             startAngle: -140,
@@ -224,28 +237,24 @@ $(function() {
         },
 
         yAxis: {
-            reversed: false,
             min: 0,
             max: 700,
-            lineWidth: 0,
-            tickLength: 0,
-            tickWidth: 0,
-            tickColor: 'white',
-            tickPosition: 'outside',
+            //tickColor: 'white',
             minorTickLength: 0,
             tickPositions: [0, 700],
+            lineWidth: 0,
             labels: {
-                distance: 30,
-                enabled: true,
-                x: 0,
-                y: 0,
-                format: '{value}',
-                style: {
-                    fontSize: 8
+                    distance: 30,
+                    enabled: true,
+                    align: 'center',
+                    x: 0,
+                    y: 0,
+                    format: '{value}',
+                    style: {
+                        fontSize: 8
+                    }
                 }
-            }
-        },
-
+          },
         plotOptions: {
             solidgauge: {
                 borderWidth: '11px',
@@ -264,7 +273,7 @@ $(function() {
                     color: Highcharts.getOptions().colors[0],
                     radius: '100%',
                     innerRadius: '95%',
-                    y: 500 // OR 3*(25/100) 
+                    y: 500
                 }],
                 dataLabels: {
                     borderRadius: 0,
@@ -272,16 +281,20 @@ $(function() {
                     borderWidth: 0,
                     borderColor: "#FFF",
                     style: {
-                        fontSize: "20px",
+                        fontSize: "14px",
+                        align:'center',
                     },
                     color: "grey",
                     crop: false,
+                    useHTML:true,
                     formatter: function() {
                         var s;
-                        s = '<span>' + this.point.y + '<div>m<sup>3</sup></div>/min' + '</span><br>' + '<div style="font-size:10px;">12.96 Rp/m<sup>3</sup></div>';
+                        //s = '<span>' + this.point.y + 'm<sup>3</sup>/min' + '</span><br>' + '<div style="font-size:10px;">12.96 Rp/m<sup>3</sup></div>';
+                        s = '<div style="text-align:center"><span>' + this.point.y + 'm<sup>3</sup>/min' + '</span><br><br><br>' +'<span style="font-size:10px;">' + '6567654' + 'm<sup>3</sup>' + '</span><br>' + '<div style="font-size:10px;">Cost : 12.96/m<sup>3</sup></div></div>';
+
                         return s;
                     },
-                    y: -30,
+                    y: 85,
 
 
                 }

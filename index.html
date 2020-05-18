@@ -10,12 +10,13 @@
     <!-- Custom styles for this template-->
         <link href="css/sb-admin-2.min.css" rel="stylesheet">
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
          
         <!-- Styling For Line Chart -->
-            <link href="css/line-chart.css" rel="stylesheet">
-        
+        <link href="css/line-chart.css" rel="stylesheet">
+
         <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
         <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
 
@@ -38,29 +39,29 @@
          }
         .progress-lbl{
             font-size: 10px;
-            width: 125px;
+            width: 135px;
             text-align: center;
          }
          .progress-lbr{
             font-size: 10px;
-            width: 45px;
+            /* width: 45px; */
             text-align: center;
         }
         .aste-guage{  
             width: 200px !important; height: 
             200px;float:left !important;
             margin-top: 10px;
-            margin-left: -20px !important;
+            margin-left: -10px !important;
         }
-        #container1 .highcharts-root{
-            width:280px !important;
+        /* #container1 .highcharts-root{
+            width:280px !important; 
             padding: 0px;
-            margin-left: -20px;
-        }
-        #container1 .highcharts-container {
+            margin-left: -30px; 
+        } */
+       /*  #container1 .highcharts-container {
              width:280px !important;
              padding: 0px;
-        }
+        } */
         ul.bt-list-bootstrap li [data-role="display"] {
                 padding: 4px 0 4px 6px;
                 white-space: nowrap;
@@ -175,6 +176,25 @@
         [data-type="tree"] ul li [data-role="expander"].bt-tree-glyphicons-expander {
                 width: 18px;
         }
+        .bt-modal  {
+            z-index: 1052 !important;
+            border: 10;
+        }
+        .wickedpicker{
+            z-index: 1052 !important;
+        }
+        .btn-edit{
+           position: fixed;
+           right:11px;bottom: 11px;
+           background-color: maroon;
+           color: rgb(179, 165, 165);
+           width: 50px;
+           height: 50px;
+           border-radius: 100%;
+        }
+        .btn-edit:hover{
+            color: rgb(245, 237, 237);
+        }
            
     </style>
 
@@ -216,7 +236,7 @@
 
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column mt-2 shadow">
              
             <!-- Main Content -->
             <div id="content">
@@ -247,13 +267,6 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <!-- <div style="width: 610px;height: 370px;" class="shadow mx-auto"> -->
-                                            <!-- <div style="float: right;">
-                                                <select class="form-control" style="height: 30px; font-size: smaller;">
-                                                    <option>By Category</option>
-                                                    <option>By Device Type</option>
-                                                </select>
-                                            </div> -->
                                             <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
                                             <div class="row">
                                                 <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
@@ -278,39 +291,46 @@
                                                     <div class="progress progress-sm mr-1 mt-4 mb-3">
                                                         <div class="progress-bar" role="progressbar" ng-style="{'width': (data.power/power*100)+'%'}" style="background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
-                                                </div>
-
+                                                </div> 
+                                                 
                                             </div>
                                             <!-- </div> -->
                                         </div>
                                         <div class="col-sm-6">
-                                            <div style="float: right;margin-top: 28px;">
-                                                <select class="form-control" style="height: 30px; font-size: smaller;">
-                                                    <option>By Category</option>
-                                                    <option>By Device Type</option>
-                                                </select>
-                                            </div>
                                             <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
-                                            <div>
+                                            <div class="row">
                                                 <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
+                                                  <option>By Category</option>
+                                                  <option>By Device Type</option>
+                                                </select>
+                                               
+                                                <select class="ml-4 form-control" style="margin-left: auto !important;width: 30%;height: 30px; font-size: smaller;">
                                                     <option>By Category</option>
                                                     <option>By Device Type</option>
                                                 </select>
-                                            </div>
+                                              </div>
                                             <div id="container2" class="aste-guage"></div>
                                             <div class="mr-1" style="float: left; margin-top: 60px;">
-
-                                                <!-- Bar 1 position:fixed;top: 0;right:0;-->
-                                                <div ng-repeat="data in groups">
-                                                    <span style="float:left;" class="mr-1 progress-lbl">{{data.deviceCategory}}</span>
-                                                    <!-- Label Left -->
-                                                    <span style="float: right;" class="mr-1 progress-lbr">{{data.power/1000 | number:0}} kW</span>
-                                                    <!-- Label Right -->
-                                                    <div class="progress progress-sm mr-1 mt-4 mb-3">
-                                                        <div class="progress-bar" role="progressbar" ng-style="{'width': (data.power/power*100)+'%'}" style="background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
+                                                    
+                                                <!-- Bar 1-->
+                                                <span style="float:left;" class="mr-1 progress-lbl">Labelhj  </span>  <!-- Label Left -->
+                                                <span style="float: right;"class="ml-1 progress-lbr">Labelhjgh jhgjg</span>  <!-- Label Right -->
+                                                <div class="progress progress-sm mr-1 mt-2 mb-3" >
+                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div> 
+                                                <!-- Bar 2 --> 
+                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>  <!-- Label Left -->
+                                                <span style="float: right;"class="ml-1 progress-lbr">Label</span>  <!-- Label Right -->
+                                                <div class="progress progress-sm mr-1 mt-4 mb-3">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-
+                                                <!-- Bar 3 -->
+                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>  <!-- Label Left -->
+                                                <span style="float: right;"class="ml-1 progress-lbr">Label</span>  <!-- Label Right -->
+                                                <div class="progress progress-sm mr-1 mt-4 mb-3">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                        
                                             </div>
                                         </div>
                                     </div>
@@ -349,12 +369,13 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <!-- <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
-    </a>
+    </a> -->
+
 <!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="openModal" style="position: fixed;right:0px;top: 75px;background-color: #00b584;">
-    Open Form
+<button type="button" class="btn btn-edit" data-toggle="modal" data-target="#myModal" id="openModal">
+    <i class="fa fa-edit" style="font-size:20px"></i>
 </button>
     <!-- The Modal -->
 <div class="modal" id="myModal">
@@ -480,6 +501,7 @@
     </div>
   </div>
    
+  
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -516,7 +538,7 @@
                 });
                  tree = $('#tree').tree({
                     width:300,
-                    border:true,
+                    //border:true,
                     uiLibrary: 'bootstrap',
                     cascadeCheck: false,
                     checkboxes: true,
@@ -552,13 +574,13 @@
         $('.fromDate').timepicker();
 
         // The below one is for demo only to be removed
-        var optionss = { now: "12:35", //hh:mm 24 hour format only, defaults to current time
+        var optionss = { //now: "12:35", //hh:mm 24 hour format only, defaults to current time
             twentyFour: false, //Display 24 hour format, defaults to false
             upArrow: 'wickedpicker__controls__control-up', //The up arrow class selector to use, for custom CSS
             downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
             close: 'wickedpicker__close', //The close class selector to use, for custom CSS
             hoverState: 'hover-state', //The hover state class to use, for custom CSS
-            title: 'To Date', //The Wickedpicker's title,
+            title: 'Choose Time', //The Wickedpicker's title,
             showSeconds: false, //Whether or not to show seconds,
             secondsInterval: 1, //Change interval for seconds, defaults to 1
             minutesInterval: 1, //Change interval for minutes, defaults to 1
@@ -566,6 +588,7 @@
             show: null, //A function to be called when the Wickedpicker is shown
             clearable: false, //Make the picker's input clearable (has clickable "x")
             }; 
+       // $('.fromDate').wickedpicker(optionss);
         $('.toDate').wickedpicker(optionss);
  });
 
