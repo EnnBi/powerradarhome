@@ -24,6 +24,10 @@ Highcharts.chart('linear-chart', {
         panKey: 'shift',
         scrollablePlotArea: {
             minWidth: 600
+        },
+        animation: {
+            duration: 2000,
+            easing: 'easeOutBounce'
         }
     },
 
@@ -53,6 +57,11 @@ Highcharts.chart('linear-chart', {
         tickInterval: 3600 * 1000,
         tickmarkPlacement: 'on'
     },
+    tooltip: {
+        formatter: function() {
+            return '<span style="color:' + this.color + '">' + this.series.name + '</span><br> ' + Highcharts.dateFormat('%A %b %e,%H:%M', new Date(this.x)) + '<br/>' + '<b>Rp : </b>' + this.y + '<br/>';
+        }
+    },
 
     yAxis: {
         startOnTick: false,
@@ -66,9 +75,6 @@ Highcharts.chart('linear-chart', {
         }
 
     },
-
-
-
     legend: {
         enabled: false
     },

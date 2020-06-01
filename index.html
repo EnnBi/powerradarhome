@@ -8,48 +8,52 @@
     <title>ASTE Design</title>
 
     <!-- Custom styles for this template-->
-        <link href="css/sb-admin-2.min.css" rel="stylesheet">
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-         
-        <!-- Styling For Line Chart -->
-        <link href="css/line-chart.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-        <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
+    <!-- Styling For Line Chart -->
+    <link href="css/line-chart.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootree.min.css" rel="stylesheet" type="text/css" />
 
     <!-- For demo to be romoved -->
-     <link href="css2/wickedpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="css2/wickedpicker.min.css" rel="stylesheet" type="text/css" />
 
     <style>
         body {
-        /*  font-family: Roboto,Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+            /*  font-family: Roboto,Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
             font-size: 14px;
             font-weight: 400;
             line-height: 1.5;
             color: #858796;
-        /*  text-align: left; */
+            /*  text-align: left; */
         }
         
-        .progress-sm{
+        .progress-sm {
             width: 90px;
             height: 10px;
-         }
-        .progress-lbl{
+        }
+        
+        .progress-lbl {
             font-size: 10px;
             width: 135px;
             text-align: center;
-         }
-         .progress-lbr{
+        }
+        
+        .progress-lbr {
             font-size: 10px;
             /* width: 45px; */
             text-align: center;
         }
-        .aste-guage{  
-            width: 200px !important; height: 
-            200px;float:left !important;
+        
+        .aste-guage {
+            width: 200px !important;
+            height: 200px;
+            float: left !important;
             margin-top: 10px;
             margin-left: -10px !important;
         }
@@ -58,76 +62,90 @@
             padding: 0px;
             margin-left: -30px; 
         } */
-       /*  #container1 .highcharts-container {
+        /*  #container1 .highcharts-container {
              width:280px !important;
              padding: 0px;
         } */
+        
         ul.bt-list-bootstrap li [data-role="display"] {
-                padding: 4px 0 4px 6px;
-                white-space: nowrap;
-                display: block;
-                color: #3a3b45;
-                text-decoration: none;
-                padding-right: 10px;
-                margin-right: 10px;
-               
-        }
-        .sideshade{
-                box-shadow: 0 .15rem 1.75rem 0 rgba(45, 45, 53, 0.212) !important;
-                padding-left: 5px;
+            padding: 4px 0 4px 6px;
+            white-space: nowrap;
+            display: block;
+            color: #3a3b45;
+            text-decoration: none;
+            padding-right: 10px;
+            margin-right: 10px;
         }
         
-        dl, ol, ul {
-               /*  margin-top: 0px !important; */
+        .sideshade {
+            box-shadow: 0 .15rem 1.75rem 0 rgba(45, 45, 53, 0.212) !important;
+            padding-left: 5px;
+        }
+        
+        dl,
+        ol,
+        ul {
+            /*  margin-top: 0px !important; */
             margin-bottom: 0;
         }
+        
         ul {
-                margin-top: 20px;
-                margin-bottom: 0px;
+            margin-top: 20px;
+            margin-bottom: 0px;
         }
-        ul ul{
-                margin-top: 0px;
-                margin-bottom: 0px;
+        
+        ul ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
+        
         ul.bt-list-bootstrap {
-                padding-left: 0px;
-                margin-bottom: 0;
-                display: block;
-                /* background-color: #858796 !important; */
+            padding-left: 0px;
+            margin-bottom: 0;
+            display: block;
+            /* background-color: #858796 !important; */
         }
         
         ul.bt-list li [data-role="expander"] {
-                text-align: left;
-                cursor: pointer;
+            text-align: left;
+            cursor: pointer;
         }
-        ul.bt-list-bootstrap li [data-role="display"]{
+        
+        ul.bt-list-bootstrap li [data-role="display"] {
             color: rgba(68, 66, 66, 0.808) !important;
         }
-        .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus{
-            background-color:#00b584;
+        
+        .list-group-item.active,
+        .list-group-item.active:hover,
+        .list-group-item.active:focus {
+            background-color: #00b584;
             border-color: #00b584;
         }
-        ul.bt-list-bootstrap li.active [data-role="display"]{
+        
+        ul.bt-list-bootstrap li.active [data-role="display"] {
             color: #fff !important;
         }
-        ul.bt-list-bootstrap li.active li [data-role="display"]{
+        
+        ul.bt-list-bootstrap li.active li [data-role="display"] {
             color: rgba(68, 66, 66, 0.808) !important;
         }
+        
         .bt-checkbox-bootstrap span {
-                /* background: #fff; */
-                display: block;
-                width: 14px;
-                height: 14px;
-                line-height: 9px;
-                font-size: 9px;
-               /*  padding: 0px; */
-                color: #00b584;
-                border: 1px solid #00b584;
-                border-radius: 3px;
-                transition: box-shadow 0.2s linear,border-color 0.2s linear;
-                cursor: pointer;
-                margin: 1px;
+            /* background: #fff; */
+            display: block;
+            width: 14px;
+            height: 14px;
+            line-height: 9px;
+            font-size: 9px;
+            /*  padding: 0px; */
+            color: #00b584;
+            border: 1px solid #00b584;
+            border-radius: 3px;
+            transition: box-shadow 0.2s linear, border-color 0.2s linear;
+            cursor: pointer;
+            margin: 1px;
         }
+        
         ul.bt-list li [data-role="expander"] {
             display: table-cell;
             vertical-align: middle;
@@ -136,66 +154,77 @@
             font-size: smaller;
             color: maroon;
         }
+        
         ul.bt-list li.active [data-role="expander"] {
             color: #fff;
         }
+        
         ul.bt-list li.active li [data-role="expander"] {
             color: maroon;
         }
-        .bt-checkbox-glyphicons input[type="checkbox"]:indeterminate + span::after {
-                display: inline-block;
-                font-family: 'Glyphicons Halflings';
-                content: "\2212 ";
-                padding-right: 1px;
-                background: #00b584;
-                color: #fff;
-                border: 1px solid #00b584;
+        
+        .bt-checkbox-glyphicons input[type="checkbox"]:indeterminate+span::after {
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            content: "\2212 ";
+            padding-right: 1px;
+            background: #00b584;
+            color: #fff;
+            border: 1px solid #00b584;
         }
-        .bt-checkbox-glyphicons input[type="checkbox"]:checked + span::after {
-                display: inline-block;
-                font-family: 'Glyphicons Halflings';
-                content: "\e013 ";
-                background: #00b584;
-                color: #fff;
-                border: 1px solid #00b584;
+        
+        .bt-checkbox-glyphicons input[type="checkbox"]:checked+span::after {
+            display: inline-block;
+            font-family: 'Glyphicons Halflings';
+            content: "\e013 ";
+            background: #00b584;
+            color: #fff;
+            border: 1px solid #00b584;
         }
+        
         .glyphicon {
-                position: relative;
-                top: 1px;
-                display: inline-block;
-                font-family: "Glyphicons Halflings";
-                font-style: normal;
-                font-weight: 400;
-                line-height: 1;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            font-family: "Glyphicons Halflings";
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+        
         ul.bt-list-bootstrap li [data-role="wrapper"] {
-                padding: 0 0px;
+            padding: 0 0px;
         }
+        
         [data-type="tree"] ul li [data-role="expander"].bt-tree-glyphicons-expander {
-                width: 18px;
+            width: 18px;
         }
-        .bt-modal  {
+        
+        .bt-modal {
             z-index: 1052 !important;
             border: 10;
         }
-        .wickedpicker{
+        
+        .wickedpicker {
             z-index: 1052 !important;
         }
-        .btn-edit{
-           position: fixed;
-           right:11px;bottom: 11px;
-           background-color: maroon;
-           color: rgb(179, 165, 165);
-           width: 50px;
-           height: 50px;
-           border-radius: 100%;
+        
+        .btn-edit {
+            position: fixed;
+            right: 11px;
+            bottom: 11px;
+            background-color: maroon;
+            color: rgb(179, 165, 165);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
         }
-        .btn-edit:hover{
+        
+        .btn-edit:hover {
             color: rgb(245, 237, 237);
         }
-           
     </style>
 
 </head>
@@ -221,41 +250,20 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper" class="mt-2">
-
         <!-- Sidebar -->
-        
-        <div id="tree" class="sideshade mt-2">
-            <!-- <div class="shadow">
-                LIST OF SITES
-            </div> -->
+        <div id="tree" class="sideshade mt-2" menu ng-if="showMenu">
         </div>
-       
-          
         <!-- End of Sidebar -->
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column mt-2 shadow">
-             
             <!-- Main Content -->
             <div id="content">
-
-                <!-- Topbar -->
-
-                <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Content Row row border-left-warning-->
-                   
                     <!-- ./row -->
-
                     <!-- Content Row -->
-
                     <div class="row">
-
                         <!-- Area Chart -->
                         <div class="col-sm-12 col-lg-12">
                             <div class="card shadow">
@@ -267,8 +275,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <div style="text-align: center;position: sticky;top: 25%;right: 45%;z-index: 99;" >
-                                                <img src="line-chart.png" alt="" width="100px" height="70px" >
+                                            <div ng-show="noData" style="text-align: center;position: sticky;top: 25%;right: 45%;z-index: 99;">
+                                                <img src="images/line-chart.png" alt="" width="100px" height="70px">
                                                 <p class="">No Data to display</p>
                                             </div>
                                             <div id="linear-chart"></div>
@@ -278,17 +286,21 @@
                                         <div class="col-sm-6">
                                             <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
                                             <div class="row">
-                                                <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
-                                                  <option>By Category</option>
-                                                  <option>By Device Type</option>
-                                                </select>
-                                               
-                                                <select class="ml-4 form-control" style="margin-left: auto !important;width: 30%;height: 30px; font-size: smaller;">
-                                                    <option>By Category</option>
-                                                    <option>By Device Type</option>
-                                                </select>
-                                              </div>
-                                              
+                                                <div class="row">
+                                                    <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;" ng-model="powerguagesite" ng-change="sitepowerconsumption()">
+                                                        <option value="">Select Site</option>
+                                                        <option ng-repeat="site in sites" value="{{site.id}}">{{site.name}}</option>
+                                                    </select>
+                                                    <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;" ng-model="powerguagegroup" ng-change="sitepowerconsumption()">
+                                                        <option value="">Group By</option>
+                                                        <option value="category">Category</option>
+                                                        <option value="deviceType">Device Type</option>
+                                                      </select>
+                                                </div>
+
+
+                                            </div>
+
                                             <div id="container1" class="aste-guage"></div>
                                             <div class="mr-1" style="float: left; margin-top: 60px;">
                                                 <!-- Bar 1 position:fixed;top: 0;right:0;-->
@@ -300,8 +312,8 @@
                                                     <div class="progress progress-sm mr-1 mt-4 mb-3">
                                                         <div class="progress-bar" role="progressbar" ng-style="{'width': (data.power/power*100)+'%'}" style="background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
-                                                </div> 
-                                                 
+                                                </div>
+
                                             </div>
                                             <!-- </div> -->
                                         </div>
@@ -309,43 +321,47 @@
                                             <div class="ml-4 mt-3" style="font-size: small;">Real Time Consumption</div>
                                             <div class="row">
                                                 <select class="ml-4 form-control" style="width: 30%;height: 30px; font-size: smaller;">
-                                                  <option>By Category</option>
-                                                  <option>By Device Type</option>
+                                                    <option value="">Select Site</option>
+                                                    <option ng-repeat="site in sites" value="{{site.id}}">{{site.name}}</option>
                                                 </select>
-                                               
+
                                                 <select class="ml-4 form-control" style="margin-left: auto !important;width: 30%;height: 30px; font-size: smaller;">
                                                     <option>By Category</option>
                                                     <option>By Device Type</option>
                                                 </select>
-                                              </div>
+                                            </div>
                                             <div id="container2" class="aste-guage"></div>
                                             <div class="mr-1" style="float: left; margin-top: 60px;">
-                                                    
+
                                                 <!-- Bar 1-->
-                                                <span style="float:left;" class="mr-1 progress-lbl">Labelhj  </span>  <!-- Label Left -->
-                                                <span style="float: right;"class="ml-1 progress-lbr">Labelhjgh jhgjg</span>  <!-- Label Right -->
-                                                <div class="progress progress-sm mr-1 mt-2 mb-3" >
-                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div> 
-                                                <!-- Bar 2 --> 
-                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>  <!-- Label Left -->
-                                                <span style="float: right;"class="ml-1 progress-lbr">Label</span>  <!-- Label Right -->
+                                                <span style="float:left;" class="mr-1 progress-lbl">Labelhj  </span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-1 progress-lbr">Labelhjgh jhgjg</span>
+                                                <!-- Label Right -->
+                                                <div class="progress progress-sm mr-1 mt-2 mb-3">
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <!-- Bar 2 -->
+                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-1 progress-lbr">Label</span>
+                                                <!-- Label Right -->
                                                 <div class="progress progress-sm mr-1 mt-4 mb-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <!-- Bar 3 -->
-                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>  <!-- Label Left -->
-                                                <span style="float: right;"class="ml-1 progress-lbr">Label</span>  <!-- Label Right -->
+                                                <span style="float:left;" class="mr-1 progress-lbl">Label</span>
+                                                <!-- Label Left -->
+                                                <span style="float: right;" class="ml-1 progress-lbr">Label</span>
+                                                <!-- Label Right -->
                                                 <div class="progress progress-sm mr-1 mt-4 mb-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 50%;background-color: #00b584;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-                        
+
                                             </div>
                                         </div>
                                     </div>
-                                    
                                     <!--  -->
-
                                 </div>
                             </div>
                         </div>
@@ -367,7 +383,7 @@
             </footer>
             <!-- End of Footer -->
 
-    </div>
+        </div>
         <!-- End of Content Wrapper -->
 
     </div>
@@ -378,142 +394,142 @@
         <i class="fas fa-angle-up"></i>
     </a> -->
 
-<!-- Button to Open the Modal -->
-<button type="button" class="btn btn-edit" data-toggle="modal" data-target="#myModal" id="openModal">
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-edit" data-toggle="modal" data-target="#myModal" id="openModal">
     <i class="fa fa-edit" style="font-size:20px"></i>
 </button>
     <!-- The Modal -->
-<div class="modal" id="myModal">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Tarif Plan Input</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            <form>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <!-- <div style="width: 100%; margin-bottom: 10px;font-size: 20px;font-family: fantasy;">Tarif Plan Input</div> -->
-                        
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">Example Plan:</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="staticEmail" value="Example Plan">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">Currency:</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" id="staticEmail" value="IRD">
-                            </div>
-                        </div>
-                    </div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Tarif Plan Input</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="row ">
-                    <div class="col-sm-3">
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control fromDate" name="fromDate" id="" value="" >
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- <div style="width: 100%; margin-bottom: 10px;font-size: 20px;font-family: fantasy;">Tarif Plan Input</div> -->
+
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">Example Plan:</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="staticEmail" value="Example Plan">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">Currency:</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="staticEmail" value="IRD">
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="row ">
+                            <div class="col-sm-3">
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control fromDate" id="" name="fromDate" t>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control fromDate" name="fromDate" id="" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">From:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control fromDate" id="" name="fromDate" t>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
+                            <div class="col-sm-3">
 
-                    </div>
-                    <div class="col-sm-3">
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control toDate" id="" name="toDate">
+                                    </div>
+                                </div>
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control toDate" id="" name="toDate" >
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control toDate" id="" name="toDate">
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
+                            <div class="col-sm-3">
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label">To:</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control toDate" id="" name="toDate">
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="staticEmail" value="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="staticEmail" value="">
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
+                            <div class="col-sm-3">
 
-                    </div>
-                    <div class="col-sm-3">
-
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="staticEmail" value="">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-4 col-form-label">Tariff is:</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="staticEmail" value="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-3">
-
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
-                            <div class="col-sm-7">
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control" id="exampleFormControlSelect1">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                 </select>
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
-                            <div class="col-sm-7">
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">/kwh; Label:</label>
+                                    <div class="col-sm-7">
+                                        <select class="form-control" id="exampleFormControlSelect1">
                                     <option>1</option>
                                     <option>2</option>
                                 </select>
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
-
-                    </div>
-
+                    </form>
                 </div>
-        </form>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+                </div>
+
+            </div>
         </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
-        </div>
-  
-      </div>
     </div>
-  </div>
-   
-  
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!--<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script> -->
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>    
+    <script src="js/sb-admin-2.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -529,151 +545,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data-2012-2022.min.js"></script>
     <script src="js/solid-guage.js"></script>
     <script src="js/linear-chart.js"></script>
-  
-   
-   <!-- Only for demo to be removed -->
+
+
+    <!-- Only for demo to be removed -->
     <script type="text/javascript" src="wickedpicker.js"></script>
 
-     <script src="js/bootree.js" type="text/javascript"></script> 
-     <script type="text/javascript">
-            $(document).ready(function () {
-                $('#openModal').click(function(){
-                   
-                  //  $('#myModal').modal('show');
-                });
-                 tree = $('#tree').tree({
-                    width:300,
-                    //border:true,
-                    uiLibrary: 'bootstrap',
-                    cascadeCheck: false,
-                    checkboxes: true,
-                    hasChildrenField: 'anyChildren',
-                    dataSource: level1
+    <script src="js/bootree.js" type="text/javascript"></script>
+    <script src="js/bootree.min.js" type="text/javascript"></script>
+    <script src="js/demo/app.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#openModal').click(function() {
+
+                //  $('#myModal').modal('show');
             });
-            tree.on('expand', function (e, $node, id) {
-                  var i, children, record = tree.getDataById(id);
-                  if (tree.getChildren($node).length === 0) {
-                      if (record.type === 'mainMenu') {
-                          children = $.grep(level2, function (i) { return i.mainMenu === record.text; });
-                          for (i = 0; i < children.length; i++) {
-                              tree.addNode(children[i], $node);
-                          }
-                      } else if (record.type === 'submenu1') {
-                          children = $.grep(level3, function (i) { return i.submenu1 === record.text; });
-                          for (i = 0; i < children.length; i++) {
-                              tree.addNode(children[i], $node);
-                          }
-                      }
-                      else if (record.type === 'submenu2') {
-                          children = $.grep(level4, function (i) { return i.submenu2 === record.text; });
-                          for (i = 0; i < children.length; i++) {
-                              tree.addNode(children[i], $node);
-                          }
-                      }
-                  }
-            });
-            tree.on('select', function (e, node, id) {
-                console.log('select is fired for node with id=' + id);
-            }); 
-     
-        $('.fromDate').timepicker();
 
-        // The below one is for demo only to be removed
-        var optionss = { //now: "12:35", //hh:mm 24 hour format only, defaults to current time
-            twentyFour: false, //Display 24 hour format, defaults to false
-            upArrow: 'wickedpicker__controls__control-up', //The up arrow class selector to use, for custom CSS
-            downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
-            close: 'wickedpicker__close', //The close class selector to use, for custom CSS
-            hoverState: 'hover-state', //The hover state class to use, for custom CSS
-            title: 'Choose Time', //The Wickedpicker's title,
-            showSeconds: false, //Whether or not to show seconds,
-            secondsInterval: 1, //Change interval for seconds, defaults to 1
-            minutesInterval: 1, //Change interval for minutes, defaults to 1
-            beforeShow: null, //A function to be called before the Wickedpicker is shown
-            show: null, //A function to be called when the Wickedpicker is shown
-            clearable: false, //Make the picker's input clearable (has clickable "x")
-            }; 
-       // $('.fromDate').wickedpicker(optionss);
-        $('.toDate').wickedpicker(optionss);
- });
+            $('.fromDate').timepicker();
 
-  
-  ////////////////// List of arrays given as DataSource to tree (Every menu has an array) ////////////////
-         var level1, level2, level3,level4, tree;
-              level1 = [
-                  {  anyChildren: true, text: 'Asia', type: 'mainMenu' },
-                  {  anyChildren: true, text: 'North America', type: 'mainMenu' },
-                  {  anyChildren: false, text: 'South America', type: 'mainMenu' }
-              ];
-              level2 = [
-                  { anyChildren: false, mainMenu: 'Asia', text: 'China', type: 'submenu1' },
-                  { anyChildren: true, mainMenu: 'North America', text: 'United States Of America', type: 'submenu1' }
-              ];
-              level3 = [
-                  { anyChildren:true, submenu1: 'United States Of America', text: 'California', type: 'submenu2' },
-                  { anyChildren:false, submenu1: 'United States Of America', text: 'Florida', type: 'submenu2' }
-              ];
-              level4 = [
-                  {  submenu2: 'California', text: 'Baramulla Kashmir', type: 'submenu3' },
-                  {  submenu2: 'California', text: 'Srinagar', type: 'submenu3' }
-              ];
-
-        /**********************************************/
-        /* ----------- CODE BY NADEEM SIR ----------- */
-        /**********************************************/
-
-        var label = [];
-        var data = [];
-        var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope, $http) {
-            var guage = "https://ifarms.com.sg:8085/powerradar/realpowerconsumption";
-            var linearchart = "https://ifarms.com.sg:8085/powerradar/realtimecost"; 
-            var sites = "https://ifarms.com.sg:8085/powerradar/sites";
-             $scope.linearchart = true
-            $scope.linearchart = !$scope.powerguage 
-
-            $http.get(sites)
-                .then(function(response) {
-                    $scope.sites = response.data;
-                });
-
-
-            $http.get(guage)
-                .then(function(response) {
-
-                    $scope.groups = response.data["devicegroup"];
-                    $scope.power = response.data["powerconsumption"];
-                    var val = ($scope.power / 1000).toFixed(0);
-                    var chart = $('#container1').highcharts();
-                    if (val > 380) {
-                        chart.yAxis[0].update({
-                            tickPositions: [0, (500)],
-                            max: 500
-                        });
-                    }
-
-                    chart.series[0].points[0].update(Number(val));
-
-                    $scope.powerguage = false;
-                });
-            var lineardata = []
-            $http.get(linearchart)
-                .then(function(response) {
-                    response.data.forEach(data => {
-                        if (Number(moment(data.dateTime).format('mm')) % 15 == 0) {
-                            var cost = (data.power * 1035.78 / 1000).toFixed(2);
-                            obj = [moment(data.dateTime).valueOf(), Number(cost)]
-                            lineardata.push(obj);
-                        }
-                    });
-
-                    var chart = $('#linear-chart').highcharts().series[0].update({
-                        data: lineardata
-                    }, true);
-                    $scope.linearchart = true;
-                });
-        }); 
-        
+            // The below one is for demo only to be removed
+            var optionss = {
+                now: "12:35", //hh:mm 24 hour format only, defaults to current time
+                twentyFour: false, //Display 24 hour format, defaults to false
+                upArrow: 'wickedpicker__controls__control-up', //The up arrow class selector to use, for custom CSS
+                downArrow: 'wickedpicker__controls__control-down', //The down arrow class selector to use, for custom CSS
+                close: 'wickedpicker__close', //The close class selector to use, for custom CSS
+                hoverState: 'hover-state', //The hover state class to use, for custom CSS
+                title: 'To Date', //The Wickedpicker's title,
+                showSeconds: false, //Whether or not to show seconds,
+                secondsInterval: 1, //Change interval for seconds, defaults to 1
+                minutesInterval: 1, //Change interval for minutes, defaults to 1
+                beforeShow: null, //A function to be called before the Wickedpicker is shown
+                show: null, //A function to be called when the Wickedpicker is shown
+                clearable: false, //Make the picker's input clearable (has clickable "x")
+            };
+            $('.toDate').wickedpicker(optionss);
+        });
     </script>
 
 </body>
